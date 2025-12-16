@@ -1,4 +1,3 @@
-s
 
 "use strict";
 
