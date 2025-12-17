@@ -30,18 +30,36 @@ function showQestions(index) {
                 list.insertAdjacentHTML("beforeend", text)
         });
 
-        const options = list.querySelectorAll("quiz_option");
+        const options = list.querySelectorAll(".quiz_option");
         options.forEach(item => item.setAttribute("onclick", "optionSelected(this)"));
 
         total.innerHTML = `${index + 1} из ${questions.length}`;
         progress.style.width = `${Math.round(((index + 1) / questions.length) * 100)}%`;
 }
 
-function optionSelected(answear) {
-        const userAnswear = answear.textContent;
-        const correctAnswear = questions[count].answear;
+function optionSelected(answer) {
+        const userAnswer = answer.textContent;
+        const correctAnswer = questions[count].answer;
         const options = document.querySelectorAll(".quiz__option");
         const iconCorrect = "<span'>&#10004;</span>";
-        const iconInCorrect = "<span'>&#9940;</span>";
-}
+        const iconIncorrect = "<span'>&#9940;</span>";
 
+
+        if (userAnswer == correctAnswer) {
+                userScore += 1;
+                answer.classList.add("correct");
+                answer.insertAdjacentHTML("beforeend", iconCorrect);
+        } else {
+                answer.classList.add("incorrect");
+                answer.insertAdjacentHTML("beforeend", iconIncorrect);
+
+                options.forEach(item => {
+                        if (item.textContent == correctAnswer) {
+                                setTimeout(() => {
+                                        item.classList.add("correct");
+                                        item.insertAdjacentHTML("beforeend", iconCorrect);
+                                }, 100);
+                        }
+                });
+        }
+}
