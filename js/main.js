@@ -17,6 +17,8 @@ if (typeof questions !== 'undefined' && questions.length > 0) {
         warning.classList.remove('hidden');
 }
 
+btnNext.addEventListener("click", nextQestion);
+
 function showQestions(index) {
         const title = $(".quiz__title");
         const list = $(".quiz__list");
@@ -26,11 +28,11 @@ function showQestions(index) {
         title.innerHTML = `${questions[index].question}`;
         list.innerHTML = '';
         questions[index].options.forEach(item => {
-                const text = `<li class="quiz_option">${item}</li>`;
+                const text = `<li class="quiz__option">${item}</li>`;
                 list.insertAdjacentHTML("beforeend", text)
         });
 
-        const options = list.querySelectorAll(".quiz_option");
+        const options = list.querySelectorAll(".quiz__option");
         options.forEach(item => item.setAttribute("onclick", "optionSelected(this)"));
 
         total.innerHTML = `${index + 1} из ${questions.length}`;
@@ -61,5 +63,27 @@ function optionSelected(answer) {
                                 }, 100);
                         }
                 });
+
+        }
+        options.forEach(item => item.classList.add("disabled"));
+}
+
+function nextQestion() {
+        const option = $(".quiz__option");
+        const result = $(".result");
+        const resultText = $(".result__text");
+
+        if ((count + 1) == questions.length && option.classList.contains('disabled')) {
+                result.classList.remove('hidden');
+                quiz.classList.add('hidden');
+                resultText.innerHTML = `Вы ответили правильно на ${userScore} из ${questions.length} вопросов.`
+                return;
+        }
+
+        if (option.classList.contains('disabled')) {
+                count++;
+                showQestions(count);
+        } else {
+                alert("Пожалуйста, выберите ответ перед переходом к следующему вопросу.");
         }
 }
