@@ -210,3 +210,33 @@ body{
 .footer__link{
     color: black;
 }
+
+.header__menu__btn{
+    color:#155724;
+    display: block;  
+    align-items: right;
+}
+
+.header__menu{
+    
+    position: relative;
+    height: 100px;
+    
+  
+ 
+}
+
+.header_menu_blocks{
+    display: flex;
+    
+    
+    
+}
+
+.header_menu_block{
+
+}
+
+.hidden{
+    display: none;
+}

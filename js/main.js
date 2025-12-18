@@ -4,6 +4,8 @@
 
 const $ = document.querySelector.bind(document);
 
+
+
 const quiz = $(".quiz");
 const warning = $('.warning');
 const btnNext = $('.quiz__next-btn');
@@ -87,3 +89,17 @@ function nextQestion() {
                 alert("Пожалуйста, выберите ответ перед переходом к следующему вопросу.");
         }
 }
+
+
+
+const burger = document.querySelector(".header__menu__btn");
+const menu = document.querySelector(".header__menu_blocks");
+
+
+burger.addEventListener("click", () => {
+        if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+        } else {
+                menu.classList.add('hidden');
+        }
+});
