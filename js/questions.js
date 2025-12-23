@@ -1,52 +1,52 @@
 const questions = [
   {
-    question: "Какое свойство запрещяет выделение текста?",
-    answer: "user-select: none",
+    question: "_____ things don`t interest me at all",
+    answer: "Those",
     options: [
-    "no-select: none",
-    "pointer-select: none",
-    "user-select: unset",
-    "user-select: none"
+    "This",
+    "That",
+    "Was",
+    "From"
     ]
   },
   {
-    question: "Какой атрибут HTML5 указывает, что элемент является недоступным для редактирования?",
-    answer: "readonly",
+    question: "I need it to speak English _____ any mistakes at all",
+    answer: "without",
     options: [
-    "disabled",
-    "readonly",
-    "required",
-    "tabindex"
+    "absolutely",
+    "from",
+    "with",
+    "without"
     ]
   },
   {
-    question: "Какой из следующих атрибутов не является новым в HTML5?",
-    answer: "checked",
+    question: "Speak English ________",
+    answer: "fluently",
     options: [
-    "autofocus",
-    "placeholder",
-    "required",
-    "checked"
+    "fluently",
+    "fast",
+    "faster",
+    "check"
     ]
   },
   {
-    question: "Значением атрибута border может быть:",
-    answer: "2",
+    question: "I ______ need you",
+    answer: "really",
     options: [
-    "top",
-    "left",
-    "2",
-    "green"
+    "really",
+    "already",
+    "very",
+    "must"
     ]
   },
   {
-    question: "Для чего нужен атрибут autocomplete='off'?",
-    answer: "откл автозаполнения",
+    question: "He _____ to find a good job",
+    answer: "needs",
     options: [
-    "откл автозаполнения",
-    "вкл автозаполнения",
-    "делает input обязательным для заполнения",
-    "скрывает input"
+    "needs",
+    "else",
+    "already",
+    "by the way"
     ]
   },
 ]
