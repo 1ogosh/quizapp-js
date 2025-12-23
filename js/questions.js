@@ -1,9 +1,9 @@
 const questions = [
   {
     question: "_____ things don`t interest me at all",
-    answer: "Those",
+    answer: "These",
     options: [
-    "This",
+    "These",
     "That",
     "Was",
     "From"
